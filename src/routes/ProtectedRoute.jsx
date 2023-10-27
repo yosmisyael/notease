@@ -11,6 +11,12 @@ export default function ProtectedRoute () {
 
     const { username } = JSON.parse(getItem('user'))
     
-    return !token ? <Navigate to={'/login'} /> : user.slice(1) !== username ? <Navigate to={'/404'} /> : <Outlet />
+    // return !token ? <Navigate to={'/login'} /> : user.slice(1) !== username ? <Navigate to={'/404'} /> : <Outlet />
+    if (!token) return <Navigate to={'/login'} />
+
+    if (token && !user.slice(1) !== username) return <Outlet />
     
+    if (token && user.slice(1) !== username) return <Navigate to={'/404'} />
+    
+
 }
