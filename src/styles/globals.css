@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #F7F7F7;
+  --color-background: #FFFFFF;
   --color-foreground: #333333;
   --color-primary: #EEEEEE;
 
@@ -11,13 +11,13 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground select-none;
   }
 }
 
 @layer components {
   .navbar {
-    @apply flex justify-between py-5 md:py-10 px-4 md:px-16 lg:px-32 items-center;
+    @apply flex justify-between py-5 px-4 md:px-8 lg:px-12 items-center border-b-2 border-b-primary;
   }
 
   .navbar > ul {
@@ -25,10 +25,14 @@
   }
 
   .dropdown {
-    @apply absolute flex flex-col gap-8 text-2xl font-bold font-primary [&>:first-child]:pt-24 px-4;
+    @apply absolute lg:relative flex flex-col lg:flex-row gap-8 text-2xl lg:text-xl font-bold font-primary [&>:first-child]:pt-32 lg:[&>:first-child]:pt-0 px-4 md:px-8;
   }
 
-  .sub-dropdown {
-    @apply relative flex flex-col gap-8 text-2xl font-bold font-primary [&>:first-child]:pt-4 px-4;
-  }
+    .btn-primary {
+        @apply bg-primary text-lg font-semibold font-secondary px-3 py-2 rounded-lg;
+    }
+
+    .btn-secondary {
+        @apply bg-foreground text-background text-lg font-semibold font-secondary px-3 py-2 rounded-lg;
+    }
 }
