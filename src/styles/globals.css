@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F7F7F7;
+  --color-foreground: #333333;
+  --color-primary: #EEEEEE;
+
+  --font-primary: var(--font-manrope);
+  --font-secondary: var(--font-sora);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply flex justify-between py-5 md:py-10 px-4 md:px-16 lg:px-32 items-center;
+  }
+
+  .navbar > ul {
+    @apply flex gap-10;
+  }
+
+  .dropdown {
+    @apply absolute flex flex-col gap-8 text-2xl font-bold font-primary [&>:first-child]:pt-24 px-4;
+  }
+
+  .sub-dropdown {
+    @apply relative flex flex-col gap-8 text-2xl font-bold font-primary [&>:first-child]:pt-4 px-4;
+  }
+}
