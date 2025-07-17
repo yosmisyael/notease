@@ -2,6 +2,7 @@
 
 import {AlignJustify, ChevronDown} from "lucide-react";
 import {useEffect, useState} from "react";
+import Logo from "@/components/atoms/Logo";
 
 export default function Header() {
     const [dropDown, setDropDown] = useState<boolean>(false);
@@ -24,7 +25,8 @@ export default function Header() {
         <nav className="navbar">
             <div className="flex gap-6">
                 {/* brand */}
-                <div className="">
+                <div className="inline-flex items-center gap-4 relative z-30">
+                    <Logo size={2.5} />
                     <h3 className="font-bold text-2xl font-secondary">Notease</h3>
                 </div>
 
@@ -39,7 +41,7 @@ export default function Header() {
                                 <ChevronDown size={24} strokeWidth={3} className={`pt-[6px] transition-all duration-200 ease-out ${dropDown ? 'rotate-180 translate-y-1' : ''}`}/>
                             </span>
                             { dropDown && (
-                                <ul className="relative lg:absolute lg:bg-background lg:top-[100%] lg:translate-y-7 flex flex-col gap-8 text-2xl lg:text-xl font-bold font-primary [&>:first-child]:pt-4 lg:[&>:first-child]:pt-0 px-4 lg:px-3 lg:py-2 lg:rounded-lg lg:border-2 lg:border-primary">
+                                <ul className="relative lg:absolute lg:bg-background lg:top-[100%] lg:translate-y-6 flex flex-col gap-5 text-2xl lg:text-xl font-bold font-primary [&>:first-child]:pt-4 lg:[&>:first-child]:pt-0 lg:[&>:last-child]:pb-1 px-4 lg:px-3 lg:py-2 lg:rounded-b-lg lg:border-2 lg:border-t-0 lg:border-primary">
                                     <li>Note</li>
                                     <li>Tag</li>
                                     <li>Secure note</li>
