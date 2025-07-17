@@ -37,11 +37,11 @@
   }
 
   .section-header {
-    @apply text-2xl lg:text-4xl font-extrabold mb-3;
+    @apply text-3xl lg:text-4xl font-extrabold mb-3;
   }
 
   .quotes {
-    @apply font-serif relative w-[30ch] text-2xl xl:text-4xl mx-auto mt-10 p-5 pl-10 xl:pl-15 rotate-[-3deg] pt-5;
+    @apply font-serif relative w-[30ch] text-lg md:text-2xl xl:text-4xl mx-auto mt-10 p-3 pl-5 md:pl-10 xl:pl-15 rotate-[-3deg] pt-5;
   }
 
   .quotes::after {

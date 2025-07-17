@@ -30,16 +30,21 @@ export default function Feature() {
         },
     ];
     return (
-        <div className="grid grid-cols-9 w-full mt-20">
+        <div className="grid grid-cols-9 w-full mt-20 md:px-14 lg:px-0 gap-5">
+            <div className="col-span-9">
+                <h2 className="section-header">
+                    Features
+                </h2>
+            </div>
             {
                 features.map(({ title, description, icon: Icon }, index) => (
-                    <div className="col-span-3 group" key={index}>
+                    <div className="col-span-9 lg:col-span-3 group" key={index}>
                         <Icon />
                         <h4 className="inline-flex gap-1 items-center text-xl lg:text-2xl font-bold">
                             {title}
                             <MoveRight className="translate-y-1 group-hover:translate-x-2 transition-transform duration-200 ease-out" />
                         </h4>
-                        <p className="text-base md:text-lg md:max-w-[38ch]">{description}</p>
+                        <p className="text-base md:text-lg lg:max-w-[38ch]">{description}</p>
                     </div>
                 ))
             }
