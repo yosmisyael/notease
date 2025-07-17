@@ -23,7 +23,7 @@ export default function Intro() {
     ];
     return (
         <div className="flex flex-col lg:flex-row items-center justify-center">
-            <div className="lg:w-1/2 lg:px-10 mb-auto">
+            <div className="lg:w-1/2 lg:pr-10 mb-auto">
                 <h2 className="section-header">Get Started</h2>
                 <p className="text-base md:text-xl">
                     Welcome to <b>Notease</b> – the open-source, lightweight note-taking app designed for simplicity, speed, and flexibility. Whether you&#39;re a student, a professional, or a creative thinker, Notease is here to help you capture and organize your thoughts like never before.
@@ -32,7 +32,7 @@ export default function Intro() {
                     “Experience note-taking like never before with Notease.”
                 </div>
             </div>
-            <ul className="lg:w-1/2 flex flex-col gap-5 mt-20 lg:mt-0 lg:px-10">
+            <ul className="lg:w-1/2 flex flex-col gap-5 mt-20 lg:mt-0 lg:pl-10">
                 {
                     benefits.map(({ title, icon: Icon, description}, index) => (
                         <li key={index} className="grid grid-cols-4 gap-5 md:gap-0">
