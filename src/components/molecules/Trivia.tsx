@@ -29,7 +29,7 @@ export default function Trivia() {
     ];
     return (
         <div className="grid grid-cols-8 mt-20 md:px-14 lg:px-0 gap-5">
-            <div className="col-span-8">
+            <div className="col-span-8 flex flex-col gap-2">
                 <h2 className="section-header">How It Works?</h2>
                 <p className="text-base md:text-xl max-w-[94ch]">
                     We believe note-taking should be seamless, intuitive, and tailored to your needs.  That&#39;s why we built this open-source note application with a flexible, powerful architecture designed for everyone. Here&#39;s a peek under the hood:
@@ -46,7 +46,7 @@ export default function Trivia() {
                     </p>
                 </div>
             ))}
-            <div className="col-span-8 w-fit justify-self-center bg-gray-200 text-center p-2 md:p-5 rounded-lg">
+            <div className="col-span-8 w-fit justify-self-center bg-gray-200 text-center p-2 pb-4 md:p-5 rounded-lg">
                 <h3 className="text-lg md:text-2xl font-bold mb-1 md:mb-3">Simple Implementation: Get Started in Minutes</h3>
                 <p className="text-lg md:text-2xl text-center max-w-[31ch] mx-auto mb-2 md:mb-3">Setting up your own note-taking haven is easier than you think!</p>
                 <a href="/documentation" className="btn-secondary">Documentation</a>
