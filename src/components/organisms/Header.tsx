@@ -59,7 +59,7 @@ export default function Header() {
             <div className="flex gap-2 relative z-10">
                 <a href="" className="hidden md:block btn-primary">Sign up</a>
                 <a href="" className="hidden md:block btn-secondary">Log in</a>
-                <a href="" className="md:hidden btn-primary">Get Notease</a>
+                <a href="" className="hidden sm:block md:hidden btn-primary">Get Notease</a>
                 <button type="button" className="lg:hidden hover:cursor-pointer" onClick={() => setMobileMenu(!mobileMenu)}>
                     <AlignJustify />
                 </button>
