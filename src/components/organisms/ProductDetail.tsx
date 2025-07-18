@@ -1,6 +1,7 @@
 import Intro from "@/components/molecules/Intro";
 import Feature from "@/components/molecules/Feature";
 import Trivia from "@/components/molecules/Trivia";
+import Contribute from '@/components/molecules/Contribute';
 
 export default function ProductDetail() {
     return (
@@ -8,6 +9,7 @@ export default function ProductDetail() {
             <Intro />
             <Feature />
             <Trivia />
+            <Contribute />
         </section>
     )
 }
